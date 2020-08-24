@@ -56,7 +56,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.14</version>
+            <version>1.10</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.10</version>
+            <version>3.8.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -132,13 +132,14 @@
                             <instructions>
                                 <Bundle-SymbolicName>org.talend.studio-utils</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
+                                <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
-                                <Import-Package>
-                                    !org.talend.utils.*,!org.talend.commons.*,*
-                                </Import-Package>
                                 <Embed-Transitive>true</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
                                     explicitly -->
-                                <Embed-Dependency>artifactId=ant|commons-codec|commons-io|commons-text|commons-lang3;inline=false</Embed-Dependency>
+                                <Embed-Dependency>artifactId=ant|ant-launcher|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency>
+                                <Import-Package>
+                                    org.talend.daikon*,org.slf4j.*,org.apache.*;resolution:=optional
+                                </Import-Package>
                             </instructions>
                         </configuration>
                     </execution>
