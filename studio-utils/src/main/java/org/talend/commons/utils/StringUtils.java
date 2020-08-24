@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 /**
  *
  * Utility class for strings. <br/>
@@ -29,28 +28,28 @@ import java.util.regex.Pattern;
 public class StringUtils {
 
     public static String repeat(String str, int repeat) {
-        return org.apache.commons.lang.StringUtils.repeat(str, repeat);
+        return org.apache.commons.lang3.StringUtils.repeat(str, repeat);
     }
 
     public static String join(Object[] array, String separator) {
-        return org.apache.commons.lang.StringUtils.join(array, separator);
+        return org.apache.commons.lang3.StringUtils.join(array, separator);
     }
 
     public static String[] split(String string, char separator) {
-        return org.apache.commons.lang.StringUtils.split(string, separator);
+        return org.apache.commons.lang3.StringUtils.split(string, separator);
     }
 
     public static String replace(String text, String repl, String with) {
-        return org.apache.commons.lang.StringUtils.replace(text, repl, with);
+        return org.apache.commons.lang3.StringUtils.replace(text, repl, with);
     }
 
     public static List<String> splitAsList(String string, char separator) {
-        String[] strings = org.apache.commons.lang.StringUtils.split(string, separator);
+        String[] strings = org.apache.commons.lang3.StringUtils.split(string, separator);
         return Arrays.asList(strings);
     }
 
     public static String capitalize(String str) {
-        return org.apache.commons.lang.StringUtils.capitalize(str);
+        return org.apache.commons.lang3.StringUtils.capitalize(str);
     }
 
     public static String getMysqlProtectedColumnName(String colname) {

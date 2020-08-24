@@ -12,7 +12,7 @@
 // ============================================================================
 package org.talend.utils.security;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.talend.daikon.security.CryptoHelper;
 import org.talend.utils.security.StudioEncryption;
 
