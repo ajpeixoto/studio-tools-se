@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.talend</groupId>
+    <groupId>org.talend.studio</groupId>
     <artifactId>studio-utils</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -130,7 +130,7 @@
                         <configuration>
                             <classifier>bundle</classifier>
                             <instructions>
-                                <Bundle-SymbolicName>org.talend.studio-utils</Bundle-SymbolicName>
+                                <Bundle-SymbolicName>org.talend.studio.studio-utils</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
                                 <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
