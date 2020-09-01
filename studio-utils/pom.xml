@@ -67,6 +67,16 @@
             <groupId>org.apache.ant</groupId>
             <artifactId>ant</artifactId>
             <version>1.10.7</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.ant</groupId>
+                    <artifactId>ant-launcher</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun</groupId>
+                    <artifactId>tools</artifactId>
+                </exclusion>
+            </exclusions> 
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -76,7 +86,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.60</version>
+            <version>1.65</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
@@ -136,7 +146,7 @@
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
                                 <Embed-Transitive>true</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
                                     explicitly -->
-                                <Embed-Dependency>artifactId=ant|ant-launcher|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency>
+                                <Embed-Dependency>artifactId=ant|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency>
                                 <Import-Package>
                                     org.talend.daikon*,org.slf4j.*,org.apache.*;resolution:=optional
                                 </Import-Package>
