@@ -66,9 +66,7 @@ public class TalendTextUtils {
         if (text == null) {
             return null;
         }
-        if (!text.startsWith(quotation)) {
-            return text;
-        }
+
         if (text.length() > 1) {
             String substring = text.substring(0, 1);
             if (quotation.equals(substring)) {
@@ -80,5 +78,16 @@ public class TalendTextUtils {
             }
         }
         return text;
+    }
+
+    public static String removeQuotesIfExist(String text, String quotation) {
+        if (text == null) {
+            return null;
+        }
+        if (!text.startsWith(quotation)) {
+            return text;
+        }
+
+        return removeQuotes(text, quotation);
     }
 }
