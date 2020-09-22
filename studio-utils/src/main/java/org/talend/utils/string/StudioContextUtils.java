@@ -17,14 +17,14 @@ import org.apache.commons.lang3.StringEscapeUtils;
 /*
  * Created by bhe on Sep 16, 2020
  */
-public class TalendTextUtils {
+public class StudioContextUtils {
 
     public static final String QUOTATION_MARK = "\"";
 
-    private TalendTextUtils() {
+    private StudioContextUtils() {
     }
 
-    public static String trimParameter(String value) {
+    public static String encodeValue(String value) {
         if (value == null) {
             return null;
         }
