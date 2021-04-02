@@ -2,19 +2,18 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.talend.studio</groupId>
-    <artifactId>studio-utils</artifactId>
-    <version>1.0.1</version>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov</artifactId>
+    <version>1.68.0</version>
     <packaging>jar</packaging>
 
-    <name>studio-utils</name>
+    <name>bcprov</name>
     <url>http://www.talend.com</url>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <daikon.version>0.31.11</daikon.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
@@ -54,66 +53,9 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant</artifactId>
-            <version>1.10.9</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.ant</groupId>
-                    <artifactId>ant-launcher</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.sun</groupId>
-                    <artifactId>tools</artifactId>
-                </exclusion>
-            </exclusions> 
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.2</version>
-        </dependency>
-        <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
             <version>1.68</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-            <version>1.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.talend.daikon</groupId>
-            <artifactId>daikon</artifactId>
-            <version>${daikon.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.talend.daikon</groupId>
-            <artifactId>crypto-utils</artifactId>
-            <version>${daikon.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -140,17 +82,17 @@
                         <configuration>
                             <classifier>bundle</classifier>
                             <instructions>
-                                <Bundle-SymbolicName>org.talend.studio.studio-utils</Bundle-SymbolicName>
+                                <Bundle-SymbolicName>org.bouncycastle.bcprov</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
                                 <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
                                 <Embed-Transitive>false</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
                                     explicitly -->
-                                <!--  Embed-Dependency>artifactId=ant|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency -->
+                                <Embed-Dependency>artifactId=bcprov-jdk15on;inline=false</Embed-Dependency>
                                 <Import-Package>
-                                    org.talend.daikon*,org.slf4j.*,org.bouncycastle.*;resolution:=optional,org.apache.*;resolution:=optional,javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
+                                    javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
                                 </Import-Package>
-                                <_exportcontents>org.talend.utils.*;version="1.0.1",org.talend.commons.utils.*;version="1.0.1"</_exportcontents>
+                                <_exportcontents>org.bouncycastle.*;version="1.68.0"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
