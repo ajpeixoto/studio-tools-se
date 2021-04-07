@@ -88,6 +88,8 @@
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
                                 <Embed-Transitive>false</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
                                     explicitly -->
+                                <Embed-Dependency>artifactId=junit;inline=false</Embed-Dependency>
+                                <_exportcontents>org.junit.*;version="4.13.2"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
