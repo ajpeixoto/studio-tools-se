@@ -80,7 +80,7 @@
                             <goal>bundle</goal>
                         </goals>
                         <configuration>
-                            <classifier>bundle</classifier>
+                            
                             <instructions>
                                 <Bundle-SymbolicName>org.junit</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
@@ -124,7 +124,7 @@
                                         <resource>
                                             <directory>${project.build.directory}</directory>
                                             <includes>
-                                                <include>${project.build.finalName}-bundle.jar</include>
+                                                <include>${project.build.finalName}.jar</include>
                                             </includes>
                                         </resource>
                                     </resources>
