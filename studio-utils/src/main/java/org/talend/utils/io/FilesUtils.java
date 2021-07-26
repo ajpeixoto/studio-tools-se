@@ -450,25 +450,6 @@ public final class FilesUtils {
         }
     }
 
-    public static String getFileMD5Hex(File inputFile) throws IOException {
-        if (inputFile == null || !inputFile.exists()) {
-            return null;
-        }
-
-        final FileInputStream inputStream = new FileInputStream(inputFile);
-        try {
-            return getStreamMD5Hex(inputStream);
-        } finally {
-            inputStream.close();
-        }
-    }
-
-    public static String getStreamMD5Hex(InputStream inputStream) throws IOException {
-        if (inputStream == null) {
-            return null;
-        }
-        return DigestUtils.md5Hex(inputStream);
-    }
 
     /**
      * DOC amaumont Comment method "getBytes".
