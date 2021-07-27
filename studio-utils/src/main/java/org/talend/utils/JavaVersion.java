@@ -38,16 +38,33 @@ public class JavaVersion implements Comparable<JavaVersion> {
         }
         return this.major - o.major;
     }
+    
+    private String normalizeVersion(String v) {
+        v = v.replaceAll("[^\\d.]", "");
+        if (v.isEmpty()) {
+            v = "0";
+        }
+        return v;
+    }
 
     private void parseVersion(String v) {
         if (v == null || v.isEmpty()) {
             return;
         }
         String[] version = v.split("[\\._]");
-        this.major = Integer.parseInt(version[0]);
+        String majorV = version[0];
+        majorV = normalizeVersion(majorV);
+
+        String minorV = version[1];
+        minorV = normalizeVersion(minorV);
+        try {
+            this.major = Integer.parseInt(majorV);
+        } catch (Exception e) {
+            LOGGER.log(Level.WARNING, "Major version parse error of " + v, e);
+        }
         if (version.length > 1) {
             try {
-                this.minor = Integer.parseInt(version[1]);
+                this.minor = Integer.parseInt(minorV);
             } catch (Exception e) {
                 LOGGER.log(Level.WARNING, "Minor version parse error of " + v, e);
             }
