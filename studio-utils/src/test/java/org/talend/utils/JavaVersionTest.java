@@ -1,6 +1,6 @@
 // ============================================================================
 //
-// Copyright (C) 2006-2019 Talend Inc. - www.talend.com
+// Copyright (C) 2006-2021 Talend Inc. - www.talend.com
 //
 // This source code is available under agreement available at
 // %InstallDIR%\features\org.talend.rcp.branding.%PRODUCTNAME%\%PRODUCTNAME%license.txt
@@ -18,8 +18,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /*
-* Created by bhe on Dec 24, 2019
-*/
+ * Created by bhe on Dec 24, 2019
+ */
 public class JavaVersionTest {
 
     @Test
@@ -33,6 +33,8 @@ public class JavaVersionTest {
         JavaVersion v6 = new JavaVersion("1.8.0_161");
         JavaVersion v7 = new JavaVersion("1.8.0_212-8u");
         JavaVersion v8 = new JavaVersion("1.8.0_99-7c");
+        JavaVersion v17 = new JavaVersion("17-ea");
+        JavaVersion v171 = new JavaVersion("17-ea.1");
 
         assertTrue(v1.compareTo(v2) < 0);
         assertTrue(v2.compareTo(v3) < 0);
@@ -47,6 +49,10 @@ public class JavaVersionTest {
         assertTrue(v3.hashCode() == v6.hashCode());
 
         assertFalse(v3.equals(v4));
+
+        assertFalse(v171.equals(v17));
+        assertFalse(v171.hashCode() == v17.hashCode());
+        assertTrue(v171.compareTo(v17) > 0);
     }
 
 }

@@ -4,7 +4,7 @@
 
     <groupId>org.talend.studio</groupId>
     <artifactId>studio-utils</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>studio-utils</name>
@@ -14,7 +14,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <daikon.version>0.31.11</daikon.version>
+        <daikon.version>0.31.12</daikon.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
@@ -66,7 +66,7 @@
         <dependency>
             <groupId>org.apache.ant</groupId>
             <artifactId>ant</artifactId>
-            <version>1.10.8</version>
+            <version>1.10.9</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.ant</groupId>
@@ -86,7 +86,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.65</version>
+            <version>1.68</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
@@ -144,12 +144,13 @@
                                 <Service-Component>*</Service-Component>
                                 <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
-                                <Embed-Transitive>true</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
+                                <Embed-Transitive>false</Embed-Transitive><!-- We need to embed oauth.common this is why we set this to true and the json is a transitive dep of 3 level, need to be embedded 
                                     explicitly -->
-                                <Embed-Dependency>artifactId=ant|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency>
+                                <!--  Embed-Dependency>artifactId=ant|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency -->
                                 <Import-Package>
-                                    org.talend.daikon*,org.slf4j.*,org.apache.*;resolution:=optional
+                                    org.talend.daikon*,org.slf4j.*,org.bouncycastle.*;resolution:=optional,org.apache.*;resolution:=optional,javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
                                 </Import-Package>
+                                <_exportcontents>org.talend.utils.*;version="1.0.1",org.talend.commons.utils.*;version="1.0.1"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
