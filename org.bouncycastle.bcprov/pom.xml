@@ -4,7 +4,7 @@
 
     <groupId>org.bouncycastle</groupId>
     <artifactId>bcprov</artifactId>
-    <version>1.68.0</version>
+    <version>1.69.0</version>
     <packaging>jar</packaging>
 
     <name>bcprov</name>
@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.68</version>
+            <version>1.69</version>
         </dependency>
     </dependencies>
     <build>
@@ -92,7 +92,7 @@
                                 <Import-Package>
                                     javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
                                 </Import-Package>
-                                <_exportcontents>org.bouncycastle.*;version="1.68.0"</_exportcontents>
+                                <_exportcontents>org.bouncycastle.*;version="1.69.0"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
