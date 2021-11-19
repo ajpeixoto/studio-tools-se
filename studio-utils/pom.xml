@@ -14,7 +14,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <daikon.version>0.31.12</daikon.version>
+        <daikon.version>0.31.13</daikon.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
