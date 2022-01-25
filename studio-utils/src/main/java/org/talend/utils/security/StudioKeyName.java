@@ -34,6 +34,8 @@ public class StudioKeyName {
 
     public static final String KEY_MIGRATION = "migration.encryption.key";
 
+    public static final String KEY_MDM_ENCRYPTION = "mdm.encryption.key";
+
     private final String keyName;
 
     /**
@@ -56,7 +58,8 @@ public class StudioKeyName {
             return false;
         }
 
-        if (this.keyName.equals(KEY_MIGRATION_TOKEN) || this.keyName.equals(KEY_MIGRATION)) {
+        if (this.keyName.equals(KEY_MIGRATION_TOKEN) || this.keyName.equals(KEY_MIGRATION)
+                || KEY_MDM_ENCRYPTION.equals(this.keyName)) {
             return true;
         }
 
@@ -124,10 +127,12 @@ public class StudioKeyName {
         return "";
     }
 
+    @Override
     public int hashCode() {
         return this.keyName.hashCode();
     }
 
+    @Override
     public boolean equals(Object that) {
         if (this == that) {
             return true;
@@ -140,6 +145,7 @@ public class StudioKeyName {
         return this.keyName.equals(thatObj.getKeyName());
     }
 
+    @Override
     public String toString() {
         return this.keyName;
     }
