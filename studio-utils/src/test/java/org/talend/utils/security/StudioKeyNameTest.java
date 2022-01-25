@@ -12,7 +12,11 @@
 // ============================================================================
 package org.talend.utils.security;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -26,7 +30,7 @@ public class StudioKeyNameTest {
 
         String[] validNames = new String[] { StudioKeyName.KEY_SYSTEM_DEFAULT, StudioKeyName.KEY_ROUTINE,
                 StudioKeyName.KEY_ROUTINE_PREFIX, StudioKeyName.KEY_SYSTEM_PREFIX, StudioKeyName.KEY_MIGRATION,
-                StudioKeyName.KEY_MIGRATION_TOKEN };
+                StudioKeyName.KEY_MIGRATION_TOKEN, StudioKeyName.KEY_MDM_ENCRYPTION };
         for (String n : validNames) {
             StudioKeyName sn = new StudioKeyName(n);
             assertNotNull(sn);
