@@ -74,7 +74,6 @@
                         <id>bundle-jar</id>
                         <phase>package</phase>
                         <configuration>
-                            <classifier>bundle</classifier>
                             <instructions>
                                 <Bundle-SymbolicName>org.apache.log4j</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
