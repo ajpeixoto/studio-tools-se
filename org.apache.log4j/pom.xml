@@ -76,7 +76,7 @@
                         <configuration>
                             <classifier>bundle</classifier>
                             <instructions>
-                                <Bundle-SymbolicName>ch.qos.reload4j</Bundle-SymbolicName>
+                                <Bundle-SymbolicName>org.apache.log4j</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
                                 <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
