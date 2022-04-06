@@ -4,6 +4,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: log4j
 Bundle-SymbolicName: org.apache.log4j
 Bundle-Version: 1.2.19.TALEND
+Import-Package: javax.jmdns;resolution:=optional,javax.jms;resolution:=o
+ ptional,javax.mail;version="[1.4,2)";resolution:=optional,javax.mail.in
+ ternet;version="[1.4,2)";resolution:=optional,javax.naming,javax.xml.pa
+ rsers,org.w3c.dom,org.xml.sax,org.xml.sax.helpers
 Export-Package: org.apache.log4j;version="1.2.19";uses:="org.apache.log4
  j.helpers,org.apache.log4j.or,org.apache.log4j.spi",org.apache.log4j.co
  nfig;version="1.2.19";uses:="org.apache.log4j",org.apache.log4j.helpers
