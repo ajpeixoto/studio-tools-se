@@ -73,6 +73,9 @@
                     <execution>
                         <id>bundle-jar</id>
                         <phase>package</phase>
+                        <goals>
+                            <goal>bundle</goal>
+                        </goals>
                         <configuration>
                             <instructions>
                                 <Bundle-SymbolicName>org.apache.log4j</Bundle-SymbolicName>
