@@ -87,7 +87,7 @@
                                 <Import-Package>!* </Import-Package>
                                 <_include>META-INF/MANIFEST.MF</_include>
                                 <Embed-Dependency>artifactId=reload4j;inline=false</Embed-Dependency>
-                                <_exportcontents>org.apache.log4j.*;version="1.2.19"</_exportcontents>
+                                <_exportcontents>org.apache.log4j.*;version="1.2.19.TALEND"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
