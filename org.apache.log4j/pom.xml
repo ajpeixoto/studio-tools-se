@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ch.qos.reload4j</groupId>
-    <artifactId>log4j</artifactId>
+    <artifactId>reload4j</artifactId>
     <version>1.2.19-TALEND </version>
     <packaging>jar</packaging>
     <name>log4j</name>
@@ -76,7 +76,7 @@
                         <configuration>
                             <classifier>bundle</classifier>
                             <instructions>
-                                <Bundle-SymbolicName>org.apache.log4j</Bundle-SymbolicName>
+                                <Bundle-SymbolicName>ch.qos.reload4j</Bundle-SymbolicName>
                                 <Service-Component>*</Service-Component>
                                 <DynamicImport-Package>*</DynamicImport-Package>
                                 <Require-Capability>osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
