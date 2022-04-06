@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ch.qos.reload4j</groupId>
     <artifactId>reload4j</artifactId>
-    <version>1.2.19-TALEND </version>
+    <version>1.2.19-TALEND</version>
     <packaging>jar</packaging>
     <name>log4j</name>
     <url>http://www.talend.com</url>
