@@ -4,7 +4,7 @@
 
     <groupId>org.talend.studio</groupId>
     <artifactId>studio-utils</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.10</version>
     <packaging>jar</packaging>
 
     <name>studio-utils</name>
@@ -86,7 +86,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.69</version>
+            <version>1.70</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
