@@ -4,7 +4,7 @@
 
     <groupId>org.talend.studio</groupId>
     <artifactId>studio-utils</artifactId>
-    <version>1.0.9</version>
+    <version>1.0.8</version>
     <packaging>jar</packaging>
 
     <name>studio-utils</name>
@@ -15,7 +15,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <daikon.version>0.31.12</daikon.version>
-        <crypto.utils.version>6.8.2</crypto.utils.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
@@ -108,7 +107,7 @@
         <dependency>
             <groupId>org.talend.daikon</groupId>
             <artifactId>crypto-utils</artifactId>
-            <version>${crypto.utils.version}</version>
+            <version>${daikon.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
