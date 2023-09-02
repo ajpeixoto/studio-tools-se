@@ -3,7 +3,7 @@ Eclipse-BuddyPolicy: registered
 Bundle-ManifestVersion: 2
 Bundle-Name: log4j
 Bundle-SymbolicName: org.apache.log4j
-Bundle-Version: 1.2.24.TALEND
+Bundle-Version: 1.2.24.1.TALEND
 Import-Package: javax.jmdns;resolution:=optional,javax.jms;resolution:=o
  ptional,javax.mail;resolution:=optional;version="[1.4,2)",javax.mail.in
  ternet;resolution:=optional;version="[1.4,2)",javax.naming,javax.xml.pa
