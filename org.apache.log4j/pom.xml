@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ch.qos.reload4j</groupId>
     <artifactId>reload4j</artifactId>
-    <version>1.2.22-TALEND</version>
+    <version>1.2.24-TALEND</version>
     <packaging>jar</packaging>
     <name>log4j</name>
     <url>http://www.talend.com</url>
@@ -52,7 +52,7 @@
         <dependency>
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
-            <version>1.2.22</version>
+            <version>1.2.24</version>
         </dependency>
     </dependencies>
     <build>
@@ -86,7 +86,7 @@
                                 <Import-Package>!* </Import-Package>
                                 <_include>META-INF/MANIFEST.MF</_include>
                                 <Embed-Dependency>artifactId=reload4j;inline=false</Embed-Dependency>
-                                <_exportcontents>org.apache.log4j.*;version="1.2.22"</_exportcontents>
+                                <_exportcontents>org.apache.log4j.*;version="1.2.24"</_exportcontents>
                             </instructions>
                         </configuration>
                     </execution>
