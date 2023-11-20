@@ -36,6 +36,8 @@ public class StudioKeysFileCheck {
     public static final String JAVA_VERSION_MINIMAL_STRING = "1.8.0_161";
 
     private static final JavaVersion JAVA_VERSION_MINIMAL = new JavaVersion(JAVA_VERSION_MINIMAL_STRING);
+    
+    private static final JavaVersion JAVA_VERSION_MAXIMUM = new JavaVersion("18");
 
     private StudioKeysFileCheck() {
 
@@ -67,6 +69,14 @@ public class StudioKeysFileCheck {
         if (cv.compareTo(JAVA_VERSION_MINIMAL) < 0) {
             RuntimeException e = new RuntimeException(
                     "Java upgrade required, minimal required java version is " + JAVA_VERSION_MINIMAL_STRING
+                            + ", current version is " + currentVersion);
+            LOGGER.error(e.getMessage(), e);
+            throw e;
+        }
+        
+        if (cv.compareTo(JAVA_VERSION_MAXIMUM) >= 0) {
+            RuntimeException e = new RuntimeException(
+                    "Maximal supported java version is " + JAVA_VERSION_MAXIMUM.toString()
                             + ", current version is " + currentVersion);
             LOGGER.error(e.getMessage(), e);
             throw e;
