@@ -37,7 +37,7 @@ public class StudioKeysFileCheck {
 
     private static final JavaVersion JAVA_VERSION_MINIMAL = new JavaVersion(JAVA_VERSION_MINIMAL_STRING);
     
-    private static final JavaVersion JAVA_VERSION_MAXIMUM = new JavaVersion("18");
+    private static final JavaVersion JAVA_VERSION_MAXIMUM = new JavaVersion("17");
 
     private StudioKeysFileCheck() {
 
@@ -74,10 +74,9 @@ public class StudioKeysFileCheck {
             throw e;
         }
         
-        if (cv.compareTo(JAVA_VERSION_MAXIMUM) >= 0) {
-            RuntimeException e = new RuntimeException(
-                    "Maximal supported java version is " + JAVA_VERSION_MAXIMUM.toString()
-                            + ", current version is " + currentVersion);
+        JavaVersion currentMajor = new JavaVersion(String.valueOf(cv.getMajor()));
+        if (currentMajor.compareTo(JAVA_VERSION_MAXIMUM) > 0) {
+            RuntimeException e = new RuntimeException("Maximum supported java version is " + JAVA_VERSION_MAXIMUM.toString() + ", current version is " + currentVersion);
             LOGGER.error(e.getMessage(), e);
             throw e;
         }
