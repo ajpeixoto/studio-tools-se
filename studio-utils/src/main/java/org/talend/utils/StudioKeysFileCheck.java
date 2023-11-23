@@ -78,7 +78,7 @@ public class StudioKeysFileCheck {
         JavaVersion currentMajor = new JavaVersion(String.valueOf(cv.getMajor()));
         if (currentMajor.compareTo(JAVA_VERSION_MAXIMUM) > 0) {
             VersionException e = new VersionException(VersionException.ERR_JAVA_VERSION_NOT_SUPPORTED,
-                    "Maximum supported java version is " + JAVA_VERSION_MAXIMUM_STRING + ", current version is " + currentVersion);
+                    "The maximum Java version supported by Studio is " + JAVA_VERSION_MAXIMUM_STRING + ". Your current version is " + currentVersion);
             LOGGER.error(e.getMessage(), e);
             throw e;
         }
