@@ -4,7 +4,7 @@
 
     <groupId>org.talend.studio</groupId>
     <artifactId>studio-utils</artifactId>
-    <version>1.0.13</version>
+    <version>1.0.14</version>
     <packaging>jar</packaging>
 
     <name>studio-utils</name>
@@ -149,7 +149,7 @@
                                     explicitly -->
                                 <!--  Embed-Dependency>artifactId=ant|bcprov-jdk15on|commons-io|commons-text;inline=false</Embed-Dependency -->
                                 <Import-Package>
-                                    org.talend.daikon*,org.slf4j.*,org.bouncycastle.*;resolution:=optional,org.apache.*;resolution:=optional,javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
+                                    org.talend.daikon*,org.slf4j.*;version=!,org.bouncycastle.*;resolution:=optional,org.apache.*;resolution:=optional,javax.crypto;resolution:=optional,javax.crypto.interfaces;resolution:=optional,javax.crypto.spec;resolution:=optional,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,javax.security.auth.callback;resolution:=optional,javax.security.auth.x500;resolution:=optional
                                 </Import-Package>
                                 <_exportcontents>org.talend.utils.*;version="1.0.1",org.talend.commons.utils.*;version="1.0.1"</_exportcontents>
                             </instructions>
