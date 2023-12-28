@@ -30,6 +30,38 @@ public class JavaVersion implements Comparable<JavaVersion> {
         parseVersion(v);
     }
 
+    
+    /**
+     * @return the major
+     */
+    public int getMajor() {
+        return major;
+    }
+
+    
+    /**
+     * @return the minor
+     */
+    public int getMinor() {
+        return minor;
+    }
+
+    
+    /**
+     * @return the buildNumber
+     */
+    public int getBuildNumber() {
+        return buildNumber;
+    }
+
+    
+    /**
+     * @return the security
+     */
+    public int getSecurity() {
+        return security;
+    }
+
     @Override
     public int compareTo(JavaVersion o) {
         if (this.major - o.major == 0) {
